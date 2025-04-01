@@ -1,0 +1,128 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-inter antialiased;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply min-h-screen bg-neutral-50 text-neutral-800;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-faktum font-semibold tracking-tight text-neutral-900;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+
+  h6 {
+    @apply text-base md:text-lg;
+  }
+
+  p {
+    @apply leading-relaxed text-neutral-700;
+  }
+
+  a {
+    @apply text-primary-600 transition-colors hover:text-primary-700;
+  }
+
+  /* Adding focus outline for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-neutral-700 ring-1 ring-neutral-300 hover:bg-neutral-50;
+  }
+
+  .btn-accent {
+    @apply bg-accent-500 text-white hover:bg-accent-600;
+  }
+
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply overflow-hidden rounded-lg bg-white shadow-subtle transition-shadow hover:shadow-normal;
+  }
+
+  .feature-card {
+    @apply flex flex-col gap-4 rounded-xl border border-neutral-200 bg-white p-6 shadow-subtle transition-all hover:shadow-normal;
+  }
+
+  .feature-icon {
+    @apply flex h-12 w-12 items-center justify-center rounded-lg bg-primary-50 text-primary-600;
+  }
+
+  .section {
+    @apply py-12 md:py-16 lg:py-24;
+  }
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #0072ff 0%, #00c4ff 100%);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #00e6be 0%, #00bcd4 100%);
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, #ffbb00 0%, #ff8a00 100%);
+}
+
+/* Animation delays for staggered animations */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
